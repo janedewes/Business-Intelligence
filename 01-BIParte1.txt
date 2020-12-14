@@ -1,0 +1,175 @@
+I 
+
+Business Intelligence (BI)
+
+
+"Informações mais precisas levam a decisões mais assertivas"
+
+Def de BI da SAS:
+"Uma ampla categoria de programas, aplicação e tecnologias para coletar, armazenar, analisar e 
+fornecer acesso a dados para ajudar os usuários corporativos a tomar melhores decisões de negócios"
+
+"É a arte de obter uma vantagem comercial a partir de dados, respondendo perguntas fundamentais"
+
+
+********************************************************************************************
+"BA - Já o Business Analytics está focado em ajudar aos tomadores de decisão a simular e entender 
+possibilidades do que acontecerá" 
+- Capacidades preditivas
+- Entender o que  acontecerá, por meio de modelos preditivos estatísticos
+
+
+********************************************************************************************
+# Gerentes e executivos precisam tomar decisões sobre informações internas, ex:
+- sistemas de transação
+- processos defabricação
+- registros dos clientes
+
+
+e tembém exeternas, ex:(consultoria e estudos da indústria, a mídia e internet) 
+- Análise sobre ações 
+- Notícias 
+- Tendências do mercado 
+- Posicionamento dos concorrentes
+etc.
+
+********************************************************************************************
+
+# Os dados estão relacionados a  todas as facetas do negócio, como:
+- transações 
+- distribuição demografica dos clientes 
+- informações financeiras da empresa 
+- processos de fabricação  
+- gerenciamento de inventário
+- tendencias da industria
+- transações de fornecedores 
+- perfis dos concorrentes
+
+********************************************************************************************
+
+# Dados do BI:
+
+- Fontes OLTP (Processamento das transações on-lie): 
+Soluções:
+    - ERP
+    - CRM
+    - SCM 
+    - Planilhas
+    - Arquivos
+    - Sistemas departamentais e desenvolvidos sobre medida
+
+
+- Fontes externas:
+    - Pesquisas sobre o mercado 
+    - informações sobre ações na bolsa
+    - informações vindas do cadastro positivo
+
+- STAGING AREA (SA)
+    - Recebe dados de fontes internas e externas, são armazenados no seu formato original, pois 
+    serão usados como área de cópia, limpeza e transações feitas pelo ETL 
+
+- OPERATIONAL DATA STORE (ODS)
+    - Bancos de dados operacionais armazena dados atuais ou quase atuais, para consultas que retornam
+    uma visão corporativa dos dados em nível detalhado. 
+
+- DATA WAREHOUSE (DW)
+    - integrado: os dados são coletados a partir de uma variedade de fontes e funcidos em um todo corrente
+    - não volátil: nenhum dado pode ser alterado ou excluído no DW.
+    - variável em relação ao tempo: todos os dados são identificados com um período de tempo particular.
+    - baseado em assuntos: possui dados que fornecem informações sobre um assunto específico em vez de 
+    sobre as operações em curso de uma empresa. 
+
+- DATA MARTS (DM)
+    - São subconjuntos de dados corporativos, geralemente focados em assuntos especiais e de valor para um 
+    departamento da corporação, unidade corporativa ou conjunto de usuários. 
+    - É um subconjunto do DW, pode ser considerado um pequeno DW. 
+
+
+********************************************************************************************
+
+# Processos de BI: como os dados brutos se transformam em informações relevantes para a tomada de decisões.
+    - Extração 
+    - Transformação 
+    - Carregamento
+    - Business Views
+    - Data Analysis
+
+
+********************************************************************************************
+
+# Business Drivers: Duas perspectivas comumente atendidas por suluções de BI:
+- Como medir e posicionar o negócio?
+- Como lidar com um ambiente de negócio tão complexo?
+
+As soluções de BI usam indicadores de desempenho e frquentemente selecionam uma ou mais abordagens de trabalho, 
+como o Business Process Management (BPM) e o Balanced Scorecard (BSC). 
+- BPM: ajudar as empresas a melhorar e otimizar suas operações em todos os aspectos do negócio. 
+- BSC: é uma ferramenta de medição e gestão de desempenho, que se organiza em torno de quatro perspectivas: 
+financeira, clientes, processos internos e aprendizagem e crescimento. 
+O BI automatiza o emprego do BSC.  
+
+
+********************************************************************************************
+
+# Modelagem de dados 
+- Existem duas abordagens para a modelagem de dados em um DW: 
+    - E-R modelos entidades relacionamentos 
+    - modelagem dimensional: 
+    tabelas dimensionais(dados para análise: tabela data, cliente, loja, produto, etc) e 
+    fato(processo de negócio: Venda)
+
+
+********************************************************************************************
+
+# ETL 
+- Extract Transform Load (Extração Transformação Carga) de dados, de diversas fontes, em modelos dimensionais
+no DW, para usuários finais realizarem consultas e tomar decisoes. 
+
+- Extração -  Obtenção de dados brutos, de fontes internas e externas para a SA e para o ODS (quando existente).
+
+- Transformação - limpeza dos dados extraídos, aplicação de regras de negócio e validação dos dados na SA como 
+preparação para carga.
+
+- Carga - Inserção dos dados transformados na SA em bases de dados do DW. 
+
+A granularidade é o nível de detalhe dentro de um banco de dados do DW, quanto MAIOR o nível de detalhe, MENOR o 
+nível de granularidade, consequentemente, maior quantidade de dados armazenados e maior capacidade de consultas que 
+podem ser atendidas. 
+
+- Manutenção: com o passar do tempoo DW e o DM sofrerão manutenção para acomodarem novos assuntos, remoção de dados 
+obsoletos e para suportar atualizações de sistemas operacionais e tecnologias envolvidas. 
+
+
+********************************************************************************************
+
+# Administração: 
+No BI, a administração das soluçoes pode ser otimizada através de Metadados que armazenam informações do tipo: 
+- De qual fonte vem o dado e onde a fonte está localizada?
+- Onde o dado está localizado na fonte?
+- Como os dados são transformados (limpeza, filtros, fórmulas, conversões, agregação, etc) 
+- Para onde foi carregado?
+- Quando foi a última carga?
+- Quem acessa?
+- Quais foram os padrões de acesso existentes?
+e qualquer outra informação necessária para gerenciar a operação do DW. 
+
+
+
+********************************************************************************************
+
+# Analises dos dados 
+
+Podemos dizer que as três técnicas mais comuns de análise de dados em um BI são:
+- Query and reporting: Linguagem SQL e relatorios. 
+- OLAP (processamento nalítico on-line): É a capacidade de manipular e analisar um grande volume de dados através 
+de múltiplas perspectivas e assim monitorar os fatos e indicadores mais relevantes da organização, por meio de 
+painéis de controle e relatórios executivos desenvolvidos para facilitar a visualização, o entendimento dos fatos 
+e a tomada de decisões. 
+- Data Mining: é uma técnica de análise para fazer descobertas automáticas sobre padrões ocultos e relacionamentos 
+desconhecidos de similaridade ou discordância entre dados, dentro de um grande volume de dados. O Data Mining usa
+algoritmos complexos e IA para fazer tais descobertas e transformá-las em informações úteis para a tomada de decisão 
+e/ou avaliação de resultado. Atualmente, um emprego muito comum desta técnica é seu uso na prevenção de fraudes, 
+segmentação de clientes e previsão de comportamento. 
+
+
+********************************************************************************************
