@@ -1,0 +1,193 @@
+II
+
+Business Intelligence - Processos de tomadas de Decisão
+
+
+# O que é Enterprise Resource Planning?
+
+ERP - Planejamento de Recursos Empresariais, é um sistema modular, integrado através de um banco de dados comum. Os módulos atendem 
+praticamente todas as áreas e departamentos de uma empresa, ex, quando um cliente faz uma compra, processos são disparados e os dados 
+serão acessados pelas demais áreas da empresa.
+- Armazem, logistica, contabilidade setor de qualidade, atendimento ao cliente. 
+
+- O ERP controla e fornece suporte a todos, ou quase todos, processos operacionais, produtivos, administrativos e comerciais da empresa. 
+O ERP também é comumente definido como um pacote integrado de aplicativos de negócios, pois compartilham um modelo comum de  processo e de 
+dados do negócio, automatizando e suportando processos operacionais de ponta a ponta, como os que se encontram nas áreas de: 
+    Produção e manufatura
+    Finanças e contabilidade
+    RH
+    Vendas, etc. 
+
+
+********************************************************************************************************************************************
+
+# Características e modulos principais de um ERP
+- O ERP é uma estratégiade tecnologia que automatiza e liga capacidades empresariais administrativas e operacioais (como finanças, RH compras, 
+fabricação e distribuição) com níveis adequados de integração que equilibram os benefícios da integração entre fornecedores e a flexibilidade
+e agilidade do negócio. Esta definição destaca que existem 2 categorias de estratégia ERP: 
+- Administrativa
+- Operacional
+
+Características:
+- Um sistema integrado e parametrizável que opera em tempo real ou próximo 
+- Possui banco de dados comum que fornece suporte e integração a todos os módulos
+- Oferta uma aparencia (UX) consistente em todos os módulos
+- Suporta os processos e implementa controles operacionais e administrativos
+- Emprega a otimização de processos
+- Gera relatórios operacionais e administrativos
+- Possibilita a gestão integrada do negócio
+- Provê a capacidade de planejar a operação
+
+
+
+Um ERP cria uma empresa mais ágil que se adapta melhor para as oportunidades e problemas. Isso também torna a empresa mais flexível e mais 
+colborativa, possibilitando queas áreas da organização funncionem com informações compartilhadas e de forma mais eficientem, buscando aumenntar
+o negócio, tanto internamente como externamente. 
+
+Vantagens:
+- Otimização dos processos operacionais e administrativos 
+- Redistribuição de funções
+- Redução de estoque e de custos
+- Integração e maior colaboração entre as áreas 
+- Redução de retrabalhos
+- Monitoramento das operações de início ao fim 
+- Geração de informação para tomada de decições 
+- Aumento da agilidade na tomada de decisões 
+- Segurança dos dados 
+- Solução flexível (novos modulos podem ser adquiridos)
+- Aquisição de conhecimento sobre as "Boas Práticas" do segmento
+
+
+Desvantagens:
+- Custos elevados (hardware, infraestrutura, licença de software, treinamento e consultoria)
+- Alteração nos processos funcionais para adequação às boas práticas 
+- Possível perda de capacidade criativa e vantagens competitivas 
+- Impactos sobre os colaboradores
+- Impacto de customizações (quando necessárias)
+- Projeto de implementação complexo
+- Problemas no cumprimento de prazos
+
+
+********************************************************************************************************************************************
+
+
+# Ferramentas
+
+- SWOT como ferramenta de decisão: A análise SWOT (Strengths (forças), Weaknesses(fraquezas), Opportunities(Oportunidades), e Threats(Ameaças))
+é uma ferramenta de análise bastante usada pelo mundo corporativo para planejamento estratégico por mieo da obtenção de informações importantes
+que caracterizam o ambiente interno (Forças e Fraquezas) e o externo (Oportunidades e Ameaças)
+
+- É um sistema simples e prático que auxilia uma empresa a adotar uma posição estratégica em um determinado ambiente. 
+- É possivel desenvolver uma solução caseira
+
+
+********************************************************************************************************************************************
+
+# Critérios para seleção de um ERP
+
+- Capacidade de apoiar a empresa no alcance dos seus objetivos estratégicos 
+- Orçamentos e custos iniciais
+- ROI
+- Flexibilidade e adequação aos processos diferenciados já existentes e que geram valor ou competitividade reconhecidos 
+- Tecnologia atualizada e escalabilidade
+- Trabalho remoto e mobile 
+- Facilidade de uso 
+- Qualidade da documentação 
+- Capacidade de treinamento do fornecedor 
+- Acesso a dados em tempo real 
+- Facilidade de parametrização e configuração 
+- Capacidade de migração de dados dos legados 
+- Custos hora para customizações 
+- Segurança da informação 
+- Experiencia do fornecedor e capacidade de suporte 
+- Metodologia de implantação 
+- Garantia
+- Custo total 
+
+********************************************************************************************************************************************
+
+
+# Metodologias de Implantação 
+
+- Os grandes fornecedores possuem metodologias próprias, geralemente compostas por metodologias de gestão, experiencias, frameworks e boas 
+praticas de mercado. A grande maioria adta para os processos de gestão o PMBOK e, mais recentemente, os frameworks ágeis estão sendo adotados, 
+com especial destaque o SCRUM. 
+
+
+********************************************************************************************************************************************
+
+# Desafios da Implantação
+
+- Falha no detalhamento dos processos na camada operacional 
+- Falha de envolvimento dos usuários operacioais
+- Falha no planejamento da infraestrutura
+- Falta de comprometimento dos patrocinadores do projeto 
+- Falha na gestão de mudanças
+- Grandes customizações
+- Falhas de testes
+- Falta de treinamento 
+- Falhas ao carregar os dados no ERP
+- Falha no "Cutover"
+- Falhas após o "go live"
+
+
+********************************************************************************************************************************************
+
+# O que é CRM? 
+
+- Gestão de relacionamento com o cliente. É considerado uma filosofia de negócio, um conjunto de processos e estratégias que tem o cliente 
+como centro. 
+
+- Podemos dizer que CRM é(Customer Relationship Management) é um sistema integrado de gestão com foco no cliente, construído por um conjunto de
+procedimentos, processos e estratégias, organizados e integrados em um modelo de gestão. 
+
+- O gartner Group define: "CRM é uma estratégia de negócio voltada ao entendimento e antecipação das necessidades e potenciais de uma empresa. 
+
+- Software CRM: 
+    Capacidade de rastrear ativamente e gerenciar as informações dos clientes 
+    Capacidade de conectar toda a sua equipe em qualquer dispositivo 
+    Consegue capturar informações de forma inteligente dos e-mails dos clientes
+    É capaz de simplificar tarefas repetitivas para que a empresa possa fazer um acompanhamento de leads mais efetivo
+    Deve fornecer recomendações e insights instantâneos 
+    Deve ser capaz de expandir e se personalizar, conforme o  crescimento da empresa
+
+
+- Embora sejam integrados, podemos dividir logicamente o CRM em três aspectos fundamentais: 
+    - CRM operacional 
+    - CRM analítico 
+    - CRM colaborativo
+
+    - CRM Social - é o mais recente que retrata o relacionamento com o cliente através das midias sociais, incluindo dados disponibilizados pelos 
+    proprios clientes em seus perfis. 
+
+
+- Fidelização: 
+Nesse sentido, podemos aproveitar as experiencias mais recentes da Gatorade e ver como buscar fidelização em um mundo cada vez mais social. 
+Alguns pontos mais relevantes: 
+    - Se voce quiser que os clientes passam seu tempo livre com voce, então precisa saber o que eles importam 
+    - Saber os resultados dos jogos e aprofundar o conhecimento sobre esportes se tornou algo funamental para o Gateroade
+    - Saiba quem está influenciando o seu cliente. Quem é que seus clientes ouvem e seguem? Um endosso desses influenciadores encurtará um 
+    longo caminho na construção de sua marca. 
+    - Surpreenda, gere prazer e faça amigos. Saber quem influencia seus clientes é apenas o começo, o importante é torná-los amigos. Conhecendo
+    o que é importante para eles, voce pode surpreendê-los, gerar prazer no relacionamento e fazer amigos. 
+
+
+- Cross-selling: 
+Oferta a clientes existentes de outros produtos ou serviçõs complementares àqueles que o cliente já compra. Ex: Aceita um sundae para 
+acompanhar seu lanche?
+
+- UP-selling: 
+É quando a empresa expõem produtos ao cliente produtos ou serviços adicionais o mais caros do que o cliente ja compra. EX: trocar suas batatas
+fritas por batatas grandes, por apenas + 50 centavos?
+
+
+
+- Do processo à implantação de uma solução CRM
+4 passos fundamentais:
+    - Definição e planejamento do modelo de relacionamento
+    - Redesenho dos processos de atendimento ao cliente
+    - Seleção da solução tecnológica
+    - Implantação da solução CRM
+
+
+********************************************************************************************************************************************
