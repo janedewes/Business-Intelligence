@@ -1,0 +1,173 @@
+ III 
+
+Business Intelligence 
+
+########################## Modelagem Dimensional ##########################
+
+
+# A importancia da Modelagem de dados 
+
+O Data warehouse é definido como um  conjunto de dados de apoio às decisoes gerenciais, integrado, não volátil, variável em relação ao tempo e
+baseado em assuntos - INMON
+- Integrado: dados são coletados de varias fontes e fundidos em um todo corrente.
+- Não volatil: o dado não pode ser alterado nem excluído. 
+- Variavel em relação ao tempo: todos os dados são identificados com um periodo de tempo particular. 
+- Orientado ao assunto: dados que fornecem informações sobre um assunto específico.
+
+Os dados devem ser preparados, para serem armazenados por assuntos, portanto a modelagem de dados é, por necessidade, parte fundamental da 
+estrutura do processamento de uma solução DW, para isso temos as técnicas como:
+- Modelagem Entidade Relacionamento (MER)
+- Modelagem Dimensional 
+
+
+***********************************************************************************************************************************************
+
+# Abordagens Técnicas
+
+Existem duas técnicas principais para modelagem de dados em um DW:
+- Modelagem Entidade Relacionamento (MER) 
+- Modelagem Dimensional 
+
+BI evoluiu rapidamente para o conceito que AUTOATENDIMENTO, onde usuários sem conhecimentos técnicos podem selecionar dados de diversas fontes
+e combiná-las de forma livre, para fins de análise, geração de relatórios dinâmicos e tomada de decisão. 
+
+
+-- O MER é uma técnica de modelagem de Banco de Dados que tem como objetivos o armazenamento estruturado, otimizado, consistente e, por fim, com 
+o menor nível de redundância de dados possível. 
+A técnica MER aplica, no DW, os mesmos elementos básicos aplicados nos sistemas OLTP(processamento de transações online):
+    Entidades;
+    Relações entre entidades;
+    Atributos. 
+Os pontos positivos do MER para DW são mais técnicos e não geram valor ao usuário da solução DW, mais um fator para o mercado adotar a Modelagem 
+Dimensional como abordagem predominante. 
+
+
+-- Modelagem Dimensional: Tem como objetivo criar banco de dados para suporte à decisão, quem apresentem os dados de uma maneira padronizada, 
+intuitiva e que permitam acesso de alto-desempenho. Ela atende a 2 requisitos importantes:
+    Entrega dados compreensiveis para os usuários;
+    Provê desempenho em consultas.
+Essa modelagem é útil para organizar, consultar, filtrar, sumarizar, detalhar e suportar a análise de dados. 
+
+
+
+
+A modelagem Dimensional possui 3 conceitos básicos: 
+    - FATO: cada fato é registrado em uma linha de uma tabela também chamada de FATO. 
+        Ex: Processo de vendas a tabela fato pode receber o nome de FATO_VENDAS e deve possuir em cada linha um item de uma venda, armazenando
+        principalmente em atributos numéricos conhecidos como medidas. 
+
+    - MEDIDA: é um atributo numerico de um fato, armazenado em uma linha da tabela Fato.
+        Ex: qnde vendida, preço unitario, custo unitario, desconto concedido, valor total, custo total, desconto total, lucro bruto, valor de
+        imposto, etc. 
+
+    - DIMENSÕES: São tabelas que fornecem a base parafiltrarmos e analisarmos as medidas da tabela fato, permitindo a visualizacao por aspectos 
+    diferentes. Respondendo a questoes do tipo: "quem?" "o que?" "quando?" "onde?" e "Por que?"
+            Ex: Data;
+                Produto;
+                Cliente;
+                Loja;
+                Promoção;
+                Vendedor.
+
+    - DATAS: Ano, semestre, trimestre, bimestre, mês, semana e dia da semana. 
+    - ENDEREÇOS: Região, estado, cidade, zona, bairro e endereço. 
+
+Exemplo de Modelo Dimensional: Tabela FATO e tabelas DIM (contendo fatos, medidas e dimensoes) CADA DIMENSAO DEVE POSSUIR UMA CHAVE PRIMÁRIA
+SIMPLES CORRESPONDENTE A UMA DAS CHAVES ESTRANGEIRAS, e que juntas, formem a chave composta da tabela Fato. 
+
+STAR SCHEMA: ou modelo de estrela são termos sinonimos de modelos dimensionais!!
+
+
+
+
+
+************************************************ STAR SCHEMA, CUBES, OLAP, ROLAP E MOLAP
+
+OLAP - Processamento analítico on-line - é a capacidade de manipular e analisar um grande volume de dados através de múltiplas perspectivas
+e assim, monitorar os fatos e os indicadores mais relevantes da organização para a tomada de decisões.
+
+ROLAP - Relational ON-line Analytical Processing - recebe o nome pois modelos dimensionais são implementados em SGBDs relacionais.
+
+MOLAP - Multidimensional on-line analytical processing - recebe o nome quando modelos dimensionais são implementados em bado de dados 
+multidimensionais. Os dados nesse tipo de implementação, sao armazenados em formatos proprietarios de cada ferramenta. 
+Soluções MOLAP eram reconhecidas pela maior performance em analises usando cubos, mas isso diminuiu com os avanços em hardware e o aumento
+exponencial de dados. 
+
+
+SNOWFLAKE: é uma variação do modelo de estrela que normaliza uma ou mais dimensoes que tenham hierarquia interna, com o objetivo de economizar 
+espaço, essa variação permite que existam tabelas complementares que se relacionam com as dimensoes, alem dos relacionamentos existentes
+entre dimensoes e fato. O floco de neve ainda é um modelo dimensional, mas as dimensoes seguem a terceira forma normal (3NF) da técnica ER. 
+
+
+
+***********************************************************************************************************************************************
+
+# Processo de Design Dimensional 
+
+Os 4 passos sugeridos são: 
+    - Selecione o Processo
+    - Determine o grão
+    - Identifique as dimensões
+    - Identifique os fatos
+
+
+Atributos comuns para tabelas DIMENSAO: 
+    DIM_DATA
+    DIM_PRODUTO
+    DIM_PROMOCAO
+    DIM_LOJA
+    DIM_VENDEDOR
+    DIM_CLIENTE
+
+    FATO_VENDAS
+
+***********************************************************************************************************************************************
+
+# Dimensões que mudam lentamente (slowly changing dimensions)
+
+3 opções mais adotadas para tratar o SCD:
+    - Atualizar o valor, gravando no novo por cima do antigo.
+    - Adicionar uma nova linha como o novo valor do atributo atualizado, mantendo os valores. 
+    - Adicionar uma nova coluna, preservando o valor anterior e inserindo o novo valor na nova coluna. 
+
+
+# Dimensões que mudam rapidamente (rapidly changing monster dimensions)
+
+    - Particionar a dimensão é uma boa solução, deixe os dados estáticos em uma parte e acomode os dados voláteis em um segunda. 
+    a aplicação dessa técnica gera dimensões menores, conhecidas como mini dimensões. 
+
+***********************************************************************************************************************************************
+
+# Tipos especiais de dimensões e tabelas
+
+- Junk Dimension - um tipo de dimensão abstrata para comodar a decodificação de flags e indicadores de baixa cardinalidade, evitando que eles 
+fiquem na tabela fato. 
+
+- Outrigger - é o nome que se dá a uma tabela ligada a uma dimensão,  quando se adota o modelo SNOWFLAKE.
+
+- Role playing dimensions - uma única dimensão física pode ser referenciada várias vezes em uma tabela de fatos, como cada referenia ligando 
+a uma função logicamente distinta para a dimensão. 
+
+- Bridge table (tabela ponte) - em um esquema dimensional classico, cada dimensao anexada a uma tabela de fatos tem um único valor consistente 
+com o grão fato. Existem situaçãoes em que uma dimensao é legitimamente multivalorada, em casos como esse, a dimensao multivalorada deve ser
+anexada à tabela Fatos, por meio de uma tabela ponte.
+
+***********************************************************************************************************************************************
+
+
+# Conslusao 
+
+Nesse conteúdo foi abordado o básico e essencial sobre Modelagem Dimensional. 
+- A importancia da modelagem de dados em um DW; 
+- As diferentes abordagens técnicas de modelagem; 
+- Os conceitos básicos de modelagem dimensional; 
+- As boas praticas de projeto. 
+
+- Também foram apresentadas técnicas para lidar com mudanças em dimensões e alguns tipos de dimensões especiais. 
+
+
+*** Antes de o usuario tomar qualquer decisão a partir de um DW, é necessário passarmos por um processo de extração, transformação e  carga de
+dados : o famoso ETL, próximo capitulo!
+
+
+# End
