@@ -1,0 +1,103 @@
+IV
+
+################################################### Business Intelligence ###################################################
+
+- É um termo abrangente, formado por um conjunto de itens que, permitem o acesso e a análise de informações para melhorar e otimizar decisões e
+desempenho em uma corporação.
+
+- As tomadas de decisão são realizadas sobre informações geradas a partir de dados disponíveis, obtidos em fontes internas ou externas à 
+corporação.
+
+- Um Data Warehouse (DW), é um conjunto de dados de apoio às decisões gerenciais, integrado, não volátil, variável em relação ao tempo e bem 
+baseado em assuntos. Integrado, pois os dados são coletados a partir de uma variedade de fontes distintas e fundidos em um todo coerente. 
+
+- Staging Area -  é a area de trabalho que recebe os dados das fontes internas e externas para que eles sejam trabalhados, antes de 
+disponibilizados para a consulta dos tomadores de decisões. 
+
+- A utilização dos Data Marts, em função do tempo de implementação muito  menor e retorno de investimento mais rápido, é a proposta de construção 
+de DW mais aceita no mercado atualmente. Lembrar que Data Marts são subconjuntos de dados corporativos, geralmente focados em assuntos especiais
+e de valor para um departamento da corporação, unidade corporativa ou conjunto de usuários. 
+
+
+**********************************************************************************************************************************************
+
+# EXTRACT - TRANSFORM - LOAD
+
+Extração Transformação e Carga -  ETL é o processo de estração, transformação e carga dos dados oriundos de fontes diversas, em modelos 
+dimensionais no DW, para que os usuários fianis possam realizar consultas e tomar decisões. 
+
+- Extração: obtenção de dados brutos, de fontes internas e externas para Staging Area (SA) e para o ODS (quando existente);
+
+- Transformação: limpeza dos dados extraídos, aplicação de regras de negócio e validação dos dados da SA como preparação para carga. 
+
+- Carga: inserção dos dados transformados na SA em bases de dados do DW a serem acessados por ferramentas de consulta, geradores de relatórios, 
+dashboards e cubos OLAP. 
+
+
+**********************************************************************************************************************************************
+
+# Staging Area e o ETL 
+
+O proposito de um  ETL é obter dados das fontes de origem, transformá-los e carregá-los nas tabelas modeladas dimensionalmente, para serem 
+acessados diretamente pelas ferramentas de consulta, geradores de relatório, geradores de dashboards e cubos OLAP.
+
+
+-> O PENTAHO DATA INTEGRATION - PDI: É um exemplo de ferramenta ETL atual. 
+ 
+-> A suíte PENTAHO fornece ferramentas para extrair, preparar, integrar dados e realizar análises visuais. De Haddop a Spark (NoSQL)
+e Bando de dados relacionais, o PENTAHO fornece soluções para trabalhar com Big Data e para gerar importantes insights.
+
+
+- ETLS baseados em ferramentas (mais popular)
+- ETLS baseados em programas 
+
+
+**********************************************************************************************************************************************
+
+ 5 - Instalação
+
+
+# A suíte PENTAHO - Converter dados em valor!
+
+O PENTAHO é uma solução open source desenvolvida em Java, composta por um conjunto de ferramentas visuais para análise de dados. Capaz de 
+combinar  a integração de dados com o processamento analítico, ele acelera significativamente o processo de obtenção, transformação, carga, 
+predição e análise de informações. 
+
+A suíte é composta por um conjunto de ferramentas e funcionalidades que podem ser usadas para os seguintes propósitos:
+    - Integração de dados;
+    - Interface os Things;
+    - Business Analytics;
+    - Big Data;
+    - Cloud Analytics;
+    - Ad Hoc Analytics;
+    - On-line Analytical Processing (OLAP);
+    - Predictive Analysis;
+    - Ad Hoc Reporting;
+    - Performance Measurements;
+
+
+# Produtos PENTAHO
+ - São usados para acessar, integrar, manipular, visualizar e analisar dados provenientes das mais diversas fontes, tais como flat files, 
+ bancos de dados relacioanis, Hadoop, bancos de dados NoSQL, bancos de dados analíticos, fluxos de mídia social e da nuvem, mesmo que não 
+ se tenha experiencia em codificação. Já programadores podem usar uma extensa API disponibilizada pelo PENTAHO para personalizar relatórios, 
+ consultas, transformações e para estender as funcionalidades esistentes. 
+
+- Os produtos incluem: 
+    Componentes baseados na web:
+                                - PENTAHO USER CONSOLE (PUC)
+                                - ANALYZER 
+                                - INTERACTIVE REPORTS
+                                - DASHBOARD DESIGNER
+                                - CTOOLS
+                                - DATA SOURCE WIZARD
+                                - DATA SOURCE MODEL EDITOR
+    
+    Ferramenta de design:
+                        - PENTAHO DATA INTEGRATION (PDI) - Ferramenta visual para ETL 
+                        - REPORT DESIGNER
+                        - AGREGATION DESIGNER 
+                        - METADATA EDITOR
+                        - SCHEMA WORKBENCH
+
+
+**********************************************************************************************************************************************
