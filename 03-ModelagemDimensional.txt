@@ -60,7 +60,7 @@ A modelagem Dimensional possui 3 conceitos básicos:
         Ex: qnde vendida, preço unitario, custo unitario, desconto concedido, valor total, custo total, desconto total, lucro bruto, valor de
         imposto, etc. 
 
-    - DIMENSÕES: São tabelas que fornecem a base parafiltrarmos e analisarmos as medidas da tabela fato, permitindo a visualizacao por aspectos 
+    - DIMENSÕES: São tabelas que fornecem a base para filtrarmos e analisarmos as medidas da tabela fato, permitindo a visualizacao por aspectos 
     diferentes. Respondendo a questoes do tipo: "quem?" "o que?" "quando?" "onde?" e "Por que?"
             Ex: Data;
                 Produto;
